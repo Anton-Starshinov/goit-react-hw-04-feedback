@@ -33,10 +33,12 @@ export default function FeedbackWidget() {
     return Math.round((good / countTotalFeedback()) * 100);
   };
 
+  const btnOptions = Object.keys({ good, neutral, bad });
+
   return (
     <Section title="Please leave feedback">
       <FeedbackOptions
-        options={['good', 'neutral', 'bad']}
+        options={btnOptions}
         onLeaveFeedback={onLeaveFeedback}
       ></FeedbackOptions>
 
